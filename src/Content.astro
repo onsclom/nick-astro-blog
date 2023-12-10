@@ -1,0 +1,28 @@
+---
+import Post from "./Post.astro";
+import blogsText from "./blogs.txt?raw";
+
+const blogs = blogsText
+  .split("---")
+  .map((blog) => blog.trim().split("\n"))
+  .map((parts) => ({
+    date: parts[0]!,
+    title: parts[1]!,
+    description: parts[2]!,
+    content: parts[3]!,
+  }))
+  .reverse();
+const newestBlog = { ...blogs[0]!, isNew: true };
+const pastBlogs = blogs.slice(1);
+---
+
+<h1>K1n9Bur93r</h1>
+<p>Hello World!</p>
+
+<h2>Blogs</h2>
+
+<h3>Most Recent</h3>
+<Post {...newestBlog} />
+
+<h3>Past Blogs</h3>
+{pastBlogs.map((blog) => <Post {...blog} />)}

@@ -1,0 +1,78 @@
+12/3/23
+Hello World, PING 
+This is a start.
+This is the first message used to build the simple blog file
+---12/3/23
+Good day, PONG
+Need something to demo?
+And this is the second message needed to show that we can indeed parse...
+---12/4/23
+Start of Day Two
+templates and rendering
+Day one was kinda slow, but most of it was building the idea that I want to implement today, I think I will be able to execute quick with this.
+---12/4/23
+Wowowow
+gotta deal with the cat
+Okay I kinda mindfucked myself a little bit here, if I can get out of this knot I invented something epic
+---12/4/23
+Booyah!
+VIP Established
+I took this way farther than I expected today, I created a new object called dynaElement that can take in a generic object and a generic template and return a document fragment that has all of it's values bound. how cool!!!
+---12/5/23
+Putting a Bow on it
+How well can we scale our design?
+Going to bed last night my mind was so focused on the idea of createing a 'dynTemplate' style page that is able to accept a series of data elements, and html templates and can exert more control how dynElements are rendered. I think I can build off of what was made before to get that working within an evening.
+---12/5/23
+oops.
+cringe.
+Sometimes I code the most stupid things without realizing what I am doing. I focus too much on creating setters and getters I realize I'm not actally doing anything lol.
+---12/5/23
+Salvage
+puttin 2 n 2 2getha
+Okay yeah things got kinda weird for a moemnt, they still are, but I've been able to expand my conept a bit, made a lot less progress 2nite, don't really have anything to show. BUT I have a lot of gold nuggets I just need to parse out from this
+---12/6/23
+Siri Shortcut Posting
+Hell yes
+I need to refine this more, but i can post kinda quickly from my phone.
+---12/6/23
+Siri Shortcuts!
+Keep it local
+I have a Siri shortcut that I can trigger with my iPhone’s action button. It throws up input UI for the blog entries and copy’s a blog to my keyboard I bet I can get even more clever with this…
+---12/6/23
+Hehe
+I love this 
+So raaaaad
+---12/6/23
+UNLV
+Crazy
+This one feels a bit more close to home, for obvious reasons. It’s all so senseless.
+
+---12/6/23
+Hey Aus
+Look at this!
+All automatic, took my doing time tonight to get this shortcut polished
+
+---12/7/23
+Dealership day
+What to do
+I’m getting pressured to buy out my old lease, need to figure out if/how I can haggle the price down
+
+---12/7/23
+Mmm ice cream
+Long day
+I had one big thing I needed to do today, but had three mini things and one medium thing so I didn’t really have that much time for my main thing. I’d say I’m at like 50% I just hope that most of the heavy lifting happened today rather than tmrw. Idk if I will work on the templates 2nite :(
+
+---12/9/23
+Gaming
+We go hard
+Another long day of BS. Good news is that I did the conversion, which involved a lot more messing around with code than I thought previously.  I think I also did 70% of the hard work for converting things over to being fully parallelized 
+
+---12/9/23
+Progress…
+Async hell holes
+Back on the progress train! So the good news is that despite the lag in returning to work, I remembered more than I thought I would. The bad news is that while I did indeed write some kind of code before, a lot of it was disjointed and it took most of the day to get to a point where objects have been able to chain and initialize each other. I’m now running into some standard JS async stuff. Since everything on the page needs to be fetched, there are a lot of items that need to load their contents, for other items to load their own. THEN the main page has to place everything. I think I need to throw in some callbacks and make it so my classes don’t initialize themselves? 
+
+---12/10/23
+Containers!
+We getting meta 
+Okay, so I know that there is a way where this can be back ported to the ‘dynElement’ object, but we have a simple enough templating system in the works.  So the new flow is the following dynContainer->dynObject(blogData),dynObject(blogHtml),dynObject(containerHtml). The ‘dynObjects’ handle all the fetching of our information, then the container combines the blog information into ‘dynElements’ which are then placed within the ‘dynContainer’’s template. So kinda meta? 

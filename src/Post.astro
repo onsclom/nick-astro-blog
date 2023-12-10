@@ -1,0 +1,35 @@
+---
+type Props = {
+  title: string;
+  description: string;
+  content: string;
+  date: string;
+  isNew?: boolean;
+};
+
+const { title, description, content, date, isNew } = Astro.props;
+---
+
+<div class={isNew ? "new" : ""}>
+  <h4>{title}</h4>
+  <h4>{description}</h4>
+  <p>{content}</p>
+  <small>{date}</small>
+</div>
+
+<style>
+  div {
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #aff;
+  }
+
+  p {
+    overflow-wrap: break-word;
+  }
+
+  .new {
+    background-color: #ff6;
+  }
+</style>
